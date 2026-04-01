@@ -1,6 +1,7 @@
 import React from "react";
 import ChartCard from "./ChartCard";
 import { toast } from "react-toastify";
+import { ChartBar, ShoppingBag, ShoppingCart } from "lucide-react";
 
 const Chart = ({ chart, setChart }) => {
   const total = chart.reduce((sum, item) => sum + item.price, 0);
@@ -36,6 +37,10 @@ const Chart = ({ chart, setChart }) => {
         </div>
       ) : (
         <div className="text-center text-3xl bg-gray-300/30 px-6 py-20 rounded-lg mt-6 mb-12">
+          <ShoppingCart className="mx-auto mb-10" size={88}></ShoppingCart>
+          <span className="text-5xl">Your Cart Is Empty!</span>
+          <br />
+          <br />
           Select the products you want to purchase and click the "Buy Now"
           button. Your selected items will appear here, allowing you to review
           your choices before proceeding to checkout.

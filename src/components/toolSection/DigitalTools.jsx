@@ -4,7 +4,7 @@ import Cards from "./Cards";
 import ToolSectionHeader from "./ToolSectionHeader";
 import Chart from "./Chart";
 
-const dataPromise = axios.get("data.json");
+const dataPromise = axios.get("/data.json");
 const DigitalTools = ({ chart, setChart }) => {
   const [selectedBtn, setSelectedBtn] = useState("products");
   return (

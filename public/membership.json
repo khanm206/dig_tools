@@ -1,0 +1,45 @@
+[
+  {
+    "id": 1,
+    "name": "Starter",
+    "description": "Ideal for individuals getting started with essential tools.",
+    "features": [
+      "Access to basic tools",
+      "Limited usage per month",
+      "Email support",
+      "Basic analytics",
+      "Single user access"
+    ],
+    "price": 0,
+    "btn": "Get Started Free"
+  },
+  {
+    "id": 2,
+    "name": "Pro",
+    "description": "Best for professionals who need advanced features and flexibility.",
+    "features": [
+      "Unlimited access to all tools",
+      "Priority email support",
+      "Advanced analytics dashboard",
+      "Export data in multiple formats",
+      "Multi-device access"
+    ],
+    "price": 49.99,
+    "tag": "Most Popular",
+    "btn": "Start Pro Trial"
+  },
+  {
+    "id": 3,
+    "name": "Enterprise",
+    "description": "Designed for teams and businesses requiring maximum performance.",
+    "features": [
+      "Everything in Pro",
+      "Dedicated account manager",
+      "Team collaboration tools",
+      "Custom integrations",
+      "24/7 priority support"
+    ],
+    "price": 99.99,
+    "btn": "Contact Sales"
+  }
+]
