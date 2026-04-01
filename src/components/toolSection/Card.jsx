@@ -1,10 +1,21 @@
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 
 const Card = ({ tool, chart, setChart }) => {
   const [purchaseBtnClicked, setPurchaseBtnClicked] = useState(false);
   const clickedHandler = () => {
-    const status = !purchaseBtnClicked;
+    let status = !purchaseBtnClicked;
+    if (chart.some((item) => item.id === tool.id)) {
+      status = false;
+    }
     setPurchaseBtnClicked(status);
+    if (status) {
+      setChart([...chart, tool]);
+      toast.success(`${tool.name} added to chart!`);
+    } else {
+      setChart(chart.filter((item) => item.id !== tool.id));
+      toast.error(`${tool.name} removed from chart!`);
+    }
   };
   let badgeColor = "";
   if (tool.tag === "New") {
@@ -33,7 +44,7 @@ const Card = ({ tool, chart, setChart }) => {
 
             <p className="text-base-content/70">{tool.description}</p>
             <h3 className="text-3xl font-black">
-              ${tool.price}{" "}
+              £{tool.price}{" "}
               <span className="text-xl font-normal">/{tool.period}</span>
             </h3>
             <ul className="mt-6 flex flex-col gap-2 text-xs h-full">
@@ -64,7 +75,9 @@ const Card = ({ tool, chart, setChart }) => {
                 onClick={clickedHandler}
                 className="btn rounded-4xl bg-linear-to-r from-primary via-[#4F39F6] to-[#9241c8] text-white btn-block"
               >
-                {purchaseBtnClicked ? "Purchased" : "Buy Now"}
+                {purchaseBtnClicked || chart.some((item) => item.id === tool.id)
+                  ? "Purchased"
+                  : "Buy Now"}
               </button>
             </div>
           </div>

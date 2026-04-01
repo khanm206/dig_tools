@@ -1,6 +1,10 @@
 import React from "react";
 
-const ToolSectionHeader = () => {
+const ToolSectionHeader = ({ selectedBtn, setSelectedBtn, chart }) => {
+  const handleBtnClick = (btnName) => {
+    const status = btnName;
+    setSelectedBtn(status);
+  };
   return (
     <div className="mb-16">
       <h1 className="text-5xl font-bold text-center mb-4">
@@ -13,11 +17,17 @@ const ToolSectionHeader = () => {
       </p>
       <div className="flex justify-center gap-4 mt-6">
         <button
-          className={`btn rounded-4xl bg-linear-to-r from-primary via-[#4F39F6] to-[#9241c8] text-white`}
+          onClick={() => handleBtnClick("products")}
+          className={`btn rounded-4xl ${selectedBtn === "products" ? "bg-linear-to-r from-primary via-[#4F39F6] to-[#9241c8] text-white" : "bg-base-100 text-base-content"}`}
         >
           Products
         </button>
-        <button className={`btn rounded-4xl`}>Chart(0)</button>
+        <button
+          onClick={() => handleBtnClick("chart")}
+          className={`btn rounded-4xl ${selectedBtn === "chart" ? "bg-linear-to-r from-primary via-[#4F39F6] to-[#9241c8] text-white" : "bg-base-100 text-base-content"}`}
+        >
+          Chart({chart.length})
+        </button>
       </div>
     </div>
   );
