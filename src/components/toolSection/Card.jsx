@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
-const Card = ({ tool }) => {
+const Card = ({ tool, chart, setChart }) => {
+  const [purchaseBtnClicked, setPurchaseBtnClicked] = useState(false);
+  const clickedHandler = () => {
+    const status = !purchaseBtnClicked;
+    setPurchaseBtnClicked(status);
+  };
   let badgeColor = "";
   if (tool.tag === "New") {
     badgeColor = "success";
@@ -55,20 +60,15 @@ const Card = ({ tool }) => {
               })}
             </ul>
             <div className="mt-6">
-              <button className="btn rounded-4xl bg-linear-to-r from-primary via-[#4F39F6] to-[#9241c8] text-white btn-block">
-                Buy Now
+              <button
+                onClick={clickedHandler}
+                className="btn rounded-4xl bg-linear-to-r from-primary via-[#4F39F6] to-[#9241c8] text-white btn-block"
+              >
+                {purchaseBtnClicked ? "Purchased" : "Buy Now"}
               </button>
             </div>
           </div>
         </div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
       </div>
     </div>
   );

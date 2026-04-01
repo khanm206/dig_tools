@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../../../src/assets/logo.png";
 import { ShoppingCart } from "lucide-react";
 
-const NavBar = () => {
+const NavBar = ({ chart }) => {
   return (
     <>
       <section className="bg-base-100 shadow-sm">
@@ -75,8 +75,15 @@ const NavBar = () => {
             </ul>
           </div>
           <div className="navbar-end gap-2 md:gap-4">
-            <ShoppingCart></ShoppingCart>
-            <button className="btn bg-white flex items-center  gap-2">
+            <div className="relative">
+              <p
+                className={`badge badge-error text-white  ${chart.length > 0 ? "absolute" : "hidden"}  rounded-full p-1 left-[50%] -top-[50%]`}
+              >
+                {chart.length}
+              </p>
+              <ShoppingCart size={28}></ShoppingCart>
+            </div>
+            <button className="btn bg-white flex items-center gap-2">
               Login
             </button>
             <button className="btn rounded-4xl bg-linear-to-r from-primary via-[#4F39F6] to-[#9241c8] text-white">
