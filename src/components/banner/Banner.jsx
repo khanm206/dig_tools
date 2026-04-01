@@ -20,7 +20,7 @@ const Banner = () => {
           Products
         </p>
         <div className="flex gap-4">
-          <button className="btn rounded-4xl bg-linear-to-r from-primary via-[#4F39F6] to-secondary text-white">
+          <button className="btn rounded-4xl bg-linear-to-r from-primary via-[#4F39F6] to-[#9241c8] text-white">
             Explore Products
           </button>
           <button className="btn rounded-4xl border border-primary text-primary hover:bg-primary hover:text-white">
