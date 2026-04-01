@@ -7,6 +7,7 @@ import DigitalTools from "./components/toolSection/DigitalTools";
 import { useState } from "react";
 import Steps from "./components/getStarted/Steps";
 import MembershipData from "./components/membership/MembershipData";
+import ExploreMore from "./components/exploreMore/ExploreMore";
 
 function App() {
   const [chart, setChart] = useState([]);
@@ -23,6 +24,8 @@ function App() {
       <Steps></Steps>
 
       <MembershipData></MembershipData>
+
+      <ExploreMore></ExploreMore>
 
       <ToastContainer></ToastContainer>
     </>
