@@ -6,7 +6,7 @@ const NavBar = () => {
   return (
     <>
       <section className="bg-base-100 shadow-sm">
-        <div className="navbar md:w-11/12 mx-auto">
+        <div className="navbar md:w-10/12 mx-auto">
           <div className="navbar-start">
             <div className="dropdown">
               <div
@@ -74,9 +74,9 @@ const NavBar = () => {
               </li>
             </ul>
           </div>
-          <div className="navbar-end gap-2">
+          <div className="navbar-end gap-2 md:gap-4">
+            <ShoppingCart></ShoppingCart>
             <button className="btn bg-white flex items-center  gap-2">
-              <ShoppingCart></ShoppingCart>
               Login
             </button>
             <button className="btn rounded-4xl bg-linear-to-r from-primary via-[#4F39F6] to-secondary text-white">

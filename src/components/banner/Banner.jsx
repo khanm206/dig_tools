@@ -5,8 +5,8 @@ import play from "../../../src/assets/play.png";
 
 const Banner = () => {
   return (
-    <div className="w-11/12 mx-auto flex justify-between items-center">
-      <div className="space-y-4 w-1/2">
+    <div className="w-10/12 mx-auto flex justify-between items-center my-20">
+      <div className="space-y-6 w-1/2">
         <div className="badge badge-soft badge-primary text-xl">
           <img src={badge} />
           New: AI-Powered Tools Available
@@ -19,7 +19,7 @@ const Banner = () => {
           software—all in one place. Start creating faster today. Explore
           Products
         </p>
-        <div>
+        <div className="flex gap-4">
           <button className="btn rounded-4xl bg-linear-to-r from-primary via-[#4F39F6] to-secondary text-white">
             Explore Products
           </button>
