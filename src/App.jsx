@@ -8,6 +8,7 @@ import { useState } from "react";
 import Steps from "./components/getStarted/Steps";
 import MembershipData from "./components/membership/MembershipData";
 import ExploreMore from "./components/exploreMore/ExploreMore";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const [chart, setChart] = useState([]);
@@ -26,6 +27,8 @@ function App() {
       <MembershipData></MembershipData>
 
       <ExploreMore></ExploreMore>
+
+      <Footer></Footer>
 
       <ToastContainer></ToastContainer>
     </>
