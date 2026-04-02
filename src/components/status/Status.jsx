@@ -33,8 +33,8 @@ const Status = () => {
 
   return (
     <motion.div
-      className="bg-linear-to-r from-primary via-[#4F39F6] to-[#9241c8]"
-      initial={{ x: 300, opacity: 0 }}
+      className="bg-linear-to-r from-primary via-[#4F39F6] to-[#9241c8] overflow-x-hidden"
+      initial={{ x: "100%", opacity: 0 }}
       animate={controls}
       transition={{ duration: 1, ease: "easeOut" }}
     >

@@ -62,7 +62,6 @@ const Chart = ({ chart, setChart }) => {
             exit="exit"
             className="mt-6"
           >
-            {/* Chart Cards */}
             {chart.map((product) => (
               <motion.div key={product.id} variants={cardVariants} layout>
                 <ChartCard
@@ -73,7 +72,6 @@ const Chart = ({ chart, setChart }) => {
               </motion.div>
             ))}
 
-            {/* Total */}
             <motion.div
               variants={footerVariants}
               whileHover={{ scale: 1.03 }}

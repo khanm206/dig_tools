@@ -7,8 +7,8 @@ import { motion } from "framer-motion";
 const Steps = () => {
   return (
     <motion.section
-      className="bg-[#F9FAFC] py-20"
-      initial={{ x: -300, opacity: 0 }}
+      className="bg-[#F9FAFC] py-20 overflow-x-hidden"
+      initial={{ x: "-100%", opacity: 0 }}
       whileInView={{ x: 0, opacity: 1 }}
       transition={{ duration: 1, ease: "easeOut" }}
       viewport={{ once: true }}

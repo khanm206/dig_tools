@@ -76,7 +76,7 @@ const Card = ({ tool, chart, setChart, tools }) => {
             <div className="mt-6">
               <motion.button
                 onClick={clickedHandler}
-                className={`btn rounded-4xl text-white btn-block ${
+                className={`btn rounded-4xl text-white btn-block overflow-x-hidden ${
                   purchaseBtnClicked ||
                   chart.some((item) => item.id === tool.id)
                     ? "bg-linear-to-r from-[#9241c8] via-[#4F39F6] to-primary"
