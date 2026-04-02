@@ -7,20 +7,20 @@ import { motion } from "framer-motion";
 const Banner = () => {
   return (
     <motion.div
-      className="lg:w-10/12 mx-4 md:mx-6 lg:mx-auto flex justify-between items-center lg:my-20 my-10"
+      className="lg:w-10/12 mx-4 md:mx-6 lg:mx-auto flex justify-between items-center flex-col lg:flex-row lg:my-20 my-10 max-h-screen overflow-hidden"
       initial={{ x: -300, opacity: 0 }}
       whileInView={{ x: 0, opacity: 1 }}
       transition={{ duration: 1, ease: "easeOut" }}
       viewport={{ once: true }}
     >
       <div
-        className={`banner-bg space-y-6 lg:w-1/2 text-center lg:text-left px-4 lg:px-0 py-6 lg:py-0 rounded-2xl lg:rounded-none`}
+        className={`space-y-6 lg:w-1/2 text-center lg:text-left px-4 lg:px-0 py-6 lg:py-0 rounded-2xl lg:rounded-none`}
       >
         <div className="badge badge-soft badge-primary p-4 md:text-xl">
           <img className="animate-pulse" src={badge} />
           New: AI-Powered Tools Available
         </div>
-        <div className="bg-white/60 lg:bg-none p-2 lg:p-0 space-y-6">
+        <div className="-2 lg:p-0 space-y-6">
           <h1 className="lg:text-7xl md:text-5xl text-4xl font-bold">
             Supercharge Your <br className="hidden lg:inline"></br>
             Digital Workflow
@@ -41,8 +41,11 @@ const Banner = () => {
         </div>
       </div>
 
-      <div className=" hidden lg:flex">
-        <img className="w-full" src={banner} />
+      <div className="w-full lg:w-auto h-96 lg:h-auto">
+        <img
+          className="w-full h-full object-cover object-center rounded-2xl"
+          src={banner}
+        />
       </div>
     </motion.div>
   );

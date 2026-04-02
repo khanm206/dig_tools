@@ -28,7 +28,7 @@ const Card = ({ tool, chart, setChart, tools }) => {
   }
   return (
     <div className={`h-full`}>
-      <div className="hover-3d w-full h-full">
+      <div className="hover-3d w-full h-full border border-gray-200 rounded-lg">
         <div className="card w-full bg-base-100 shadow-sm">
           <div className="card-body space-y-4">
             <div className="flex justify-end">
