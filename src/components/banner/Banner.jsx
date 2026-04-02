@@ -7,14 +7,14 @@ import { motion } from "framer-motion";
 const Banner = () => {
   return (
     <motion.div
-      className="lg:w-10/12 mx-4 md:mx-6 lg:mx-auto flex justify-between items-center flex-col lg:flex-row lg:my-20 mb-10 mt-4 max-h-screen overflow-hidden"
+      className="lg:w-10/12 mx-4 md:mx-6 lg:mx-auto grid md:grid-cols-2 grid-cols-1 md:gap-4 items-center lg:my-20 mb-10 mt-4 max-h-screen overflow-hidden"
       initial={{ x: "-100%", opacity: 0 }}
       whileInView={{ x: 0, opacity: 1 }}
       transition={{ duration: 1, ease: "easeOut" }}
       viewport={{ once: true }}
     >
       <div
-        className={`space-y-6 lg:w-1/2 text-center lg:text-left px-4 lg:px-0 py-6 lg:py-0 rounded-2xl lg:rounded-none`}
+        className={`space-y-6 lg:space-y-12  text-center lg:text-left px-4 lg:px-0 py-6 lg:py-0 rounded-2xl lg:rounded-none`}
       >
         <div className="badge badge-soft badge-primary p-4 md:text-xl">
           <img className="animate-pulse" src={badge} />
