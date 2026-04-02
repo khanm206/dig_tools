@@ -8,7 +8,7 @@ const membershipDataPromise = axios.get("/membership.json");
 const MembershipData = () => {
   return (
     <motion.section
-      className="lg:w-10/12 md:mx-6 mx-4 lg:mx-auto md:my-40 my-30 overflow-x-hidden"
+      className="lg:w-10/12 md:mx-6 mx-4 lg:mx-auto md:my-40 my-30"
       initial={{ y: 300, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ duration: 1, ease: "easeOut" }}
