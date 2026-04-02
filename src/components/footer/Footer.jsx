@@ -1,15 +1,12 @@
 import React from "react";
+import footerLogo from "../../../src/assets/logo.png";
 
 const Footer = () => {
   return (
     <section className="bg-[#101727]">
-      <footer className="footer sm:footer-horizontal text-white/80 md:w-10/12 mx-auto p-10">
+      <footer className="footer sm:footer-horizontal text-white/80 lg:w-11/12 lg:mx-auto md:mx-6 mx-4 p-10">
         <aside>
-          <img
-            className="max-w-35"
-            src="../../../src/assets/logo.png"
-            alt="logo"
-          />
+          <img className="max-w-35" src={footerLogo} />
           <p>
             Premium digital tools for creators,
             <br />
@@ -78,8 +75,8 @@ const Footer = () => {
           </div>
         </nav>
       </footer>
-      <hr className="text-white/40 md:w-10/12 mx-auto" />
-      <footer className="footer sm:footer-horizontal  text-neutral-content items-center md:w-10/12 mx-auto p-4 ">
+      <hr className="text-white/40 md:w-11/12 mx-auto" />
+      <footer className="footer sm:footer-horizontal  text-neutral-content items-center md:w-11/12 mx-auto p-4 ">
         <aside className="grid-flow-col items-center">
           <p>© {new Date().getFullYear()} Digtools. All right reserved.</p>
         </aside>

@@ -8,7 +8,13 @@ const Cards = ({ dataPromise, chart, setChart }) => {
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {tools.map((tool) => (
-          <Card key={tool.id} tool={tool} chart={chart} setChart={setChart} />
+          <Card
+            key={tool.id}
+            tool={tool}
+            tools={tools}
+            chart={chart}
+            setChart={setChart}
+          />
         ))}
       </div>
     </>

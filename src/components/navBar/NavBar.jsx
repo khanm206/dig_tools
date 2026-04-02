@@ -7,8 +7,8 @@ const NavBar = ({ chart }) => {
     <>
       <section className="h-15 flex justify-center">
         <div className=" fixed w-full mx-auto z-10 top-0">
-          <div className="max-w-400 mx-auto bg-base-100 shadow-sm">
-            <div className="navbar w-10/12 mx-auto">
+          <div className="max-w-450 mx-auto bg-base-100 shadow-sm">
+            <div className="navbar lg:w-11/12 mx-auto">
               <div className="navbar-start">
                 <div className="dropdown">
                   <div
@@ -51,10 +51,13 @@ const NavBar = ({ chart }) => {
                     <li>
                       <a>FAQ</a>
                     </li>
+                    <li>
+                      <a>Login</a>
+                    </li>
                   </ul>
                 </div>
                 <a className="btn btn-ghost text-xl">
-                  <img src={logo} alt="Logo" className="w-26" />
+                  <img src={logo} alt="logo" className="w-18 md:w-26" />
                 </a>
               </div>
               <div className="navbar-center hidden lg:flex">
@@ -79,16 +82,16 @@ const NavBar = ({ chart }) => {
               <div className="navbar-end gap-2 md:gap-4">
                 <div className="relative">
                   <p
-                    className={`badge badge-error text-white  ${chart.length > 0 ? "absolute" : "hidden"}  rounded-full p-1 left-[50%] -top-[50%]`}
+                    className={`badge badge-error text-white  ${chart.length > 0 ? "absolute" : "hidden"}  rounded-full p-1 left-[65%] -top-[20%] h-4`}
                   >
                     {chart.length}
                   </p>
-                  <ShoppingCart size={28}></ShoppingCart>
+                  <ShoppingCart size={22}></ShoppingCart>
                 </div>
-                <button className="btn bg-white flex items-center gap-2">
+                <button className="btn bg-white hidden md:flex items-center gap-2 text-[12px] md:text-sm">
                   Login
                 </button>
-                <button className="btn rounded-4xl bg-linear-to-r from-primary via-[#4F39F6] to-[#9241c8] text-white">
+                <button className="btn rounded-4xl bg-linear-to-r from-primary via-[#4F39F6] to-[#9241c8] text-white w-fit md:w-auto text-[10px] md:text-sm">
                   Get Started
                 </button>
               </div>

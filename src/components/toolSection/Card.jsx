@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { toast } from "react-toastify";
 
-const Card = ({ tool, chart, setChart }) => {
+const Card = ({ tool, chart, setChart, tools }) => {
   const [purchaseBtnClicked, setPurchaseBtnClicked] = useState(false);
   const clickedHandler = () => {
     let status = !purchaseBtnClicked;
@@ -26,7 +26,9 @@ const Card = ({ tool, chart, setChart }) => {
     badgeColor = "warning";
   }
   return (
-    <div className="h-full">
+    <div
+      className={`h-full md:mx-auto ${tool.id === tools.length && tools.length / 2 !== 0 && "md:col-span-2 md:w-[50%] lg:col-span-1 lg:w-auto"}`}
+    >
       <div className="hover-3d w-full h-full">
         <div className="card w-full bg-base-100 shadow-sm">
           <div className="card-body space-y-4">
@@ -40,12 +42,14 @@ const Card = ({ tool, chart, setChart }) => {
             <div className="p-2 border-2 w-fit rounded-full border-gray-300 text-2xl">
               {tool.icon}
             </div>
-            <h2 className="text-3xl font-bold">{tool.name}</h2>
+            <h2 className="md:text-3xl text-2xl font-bold">{tool.name}</h2>
 
             <p className="text-base-content/70">{tool.description}</p>
-            <h3 className="text-3xl font-black">
+            <h3 className="md:text-3xl text-2xl font-black">
               £{tool.price}{" "}
-              <span className="text-xl font-normal">/{tool.period}</span>
+              <span className="md:text-xl text-lg font-normal">
+                /{tool.period}
+              </span>
             </h3>
             <ul className="mt-6 flex flex-col gap-2 text-xs h-full">
               {tool.features.map((feature, index) => {

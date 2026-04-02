@@ -8,7 +8,7 @@ const dataPromise = axios.get("/data.json");
 const DigitalTools = ({ chart, setChart }) => {
   const [selectedBtn, setSelectedBtn] = useState("products");
   return (
-    <section className="w-10/12 mx-auto my-40">
+    <section className="lg:w-10/12 lg:mx-auto my-40 mx-4 md:mx-6">
       <ToolSectionHeader
         chart={chart}
         selectedBtn={selectedBtn}

@@ -6,7 +6,7 @@ import MembershipDataHeader from "./MembershipDataHeader";
 const membershipDataPromise = axios.get("/membership.json");
 const MembershipData = () => {
   return (
-    <section className="w-10/12 mx-auto my-40">
+    <section className="lg:w-10/12 md:mx-6 mx-4 lg:mx-auto my-40">
       <Suspense
         fallback={
           <div className="flex w-52 flex-col gap-4">

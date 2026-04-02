@@ -1,8 +1,10 @@
 import React from "react";
 
-const MembershipCard = ({ res }) => {
+const MembershipCard = ({ res, data }) => {
   return (
-    <div className="h-full relative z-0">
+    <div
+      className={`h-full relative z-0 md:mx-auto ${res.id === data.length && data.length / 2 !== 0 && "md:col-span-2 md:w-[50%] lg:col-span-1 lg:w-auto"}`}
+    >
       <div
         className={`${!res.tag ? "hidden" : "badge badge-warning text-xl text-gray py-4 mx-auto absolute z-10 -top-[5%] left-[32%]"}`}
       >
@@ -13,11 +15,12 @@ const MembershipCard = ({ res }) => {
           className={`card ${res.tag ? "bg-linear-to-r from-primary via-[#4F39F6] to-[#9241c8] text-white" : "bg-base-200"} shadow-sm`}
         >
           <div className="card-body space-y-4">
-            <h2 className="text-3xl font-bold">{res.name}</h2>
+            <h2 className="md:text-3xl text-2xl font-bold">{res.name}</h2>
 
             <p className="text-base">{res.description}</p>
-            <h3 className="text-3xl font-black">
-              £{res.price} <span className="text-xl font-normal">/Month</span>
+            <h3 className="md:text-3xl text-2xl font-black">
+              £{res.price}{" "}
+              <span className="md:text-xl text-lg font-normal">/Month</span>
             </h3>
             <ul className="mt-6 flex flex-col gap-2 text-xs h-full">
               {res.features.map((feature, index) => {
