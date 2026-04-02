@@ -10,12 +10,17 @@ const ChartCard = ({ product, chart, setChart }) => {
 
   return (
     <motion.div
-      initial={{ y: 50, opacity: 0 }} // start 50px below and invisible
-      whileInView={{ y: 0, opacity: 1 }} // move to place and fade in
-      viewport={{ once: true, amount: 0.3 }} // animate when 30% visible, only once
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      whileHover={{ scale: 1.03 }} // subtle hover bounce
-      transition={{ type: "spring", stiffness: 200, damping: 15 }}
+      initial={{ y: 50, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{
+        duration: 0.6,
+        ease: "easeOut",
+        type: "spring",
+        stiffness: 200,
+        damping: 15,
+      }}
+      whileHover={{ scale: 1.03 }}
       className="lg:text-2xl bg-gray-300/30 md:p-6 p-4 rounded-lg mt-6 mb-12 flex flex-col md:flex-row md:items-center justify-between"
     >
       <div className="flex items-center gap-2 md:gap-4">

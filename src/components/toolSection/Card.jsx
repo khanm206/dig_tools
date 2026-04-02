@@ -27,9 +27,7 @@ const Card = ({ tool, chart, setChart, tools }) => {
     badgeColor = "warning";
   }
   return (
-    <div
-      className={`h-full md:mx-auto ${tool.id === tools.length && tools.length / 2 !== 0 && "md:col-span-2 md:w-[50%] lg:col-span-1 lg:w-auto"}`}
-    >
+    <div className={`h-full`}>
       <div className="hover-3d w-full h-full">
         <div className="card w-full bg-base-100 shadow-sm">
           <div className="card-body space-y-4">
