@@ -6,7 +6,7 @@ const MembershipCard = ({ res, data }) => {
       className={`h-full relative z-0 md:mx-auto ${res.id === data.length && data.length / 2 !== 0 && "md:col-span-2 md:w-[50%] lg:col-span-1 lg:w-auto"}`}
     >
       <div
-        className={`${!res.tag ? "hidden" : "badge badge-warning text-xl text-gray py-4 mx-auto absolute z-10 -top-[5%] left-[32%]"}`}
+        className={`${!res.tag ? "hidden" : "badge badge-warning text-xl text-gray py-4 mx-auto absolute z-10 -top-[2%] left-[32%] animate-bounce"}`}
       >
         {res.tag ? res.tag : ""}
       </div>

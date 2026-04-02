@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { toast } from "react-toastify";
+import { motion } from "framer-motion";
 
 const Card = ({ tool, chart, setChart, tools }) => {
   const [purchaseBtnClicked, setPurchaseBtnClicked] = useState(false);
@@ -75,14 +76,30 @@ const Card = ({ tool, chart, setChart, tools }) => {
               })}
             </ul>
             <div className="mt-6">
-              <button
+              <motion.button
                 onClick={clickedHandler}
-                className="btn rounded-4xl bg-linear-to-r from-primary via-[#4F39F6] to-[#9241c8] text-white btn-block"
+                className={`btn rounded-4xl text-white btn-block ${
+                  purchaseBtnClicked ||
+                  chart.some((item) => item.id === tool.id)
+                    ? "bg-linear-to-r from-[#9241c8] via-[#4F39F6] to-primary"
+                    : "bg-linear-to-r from-primary via-[#4F39F6] to-[#9241c8]"
+                }`}
+                initial={{ scale: 1 }}
+                whileInView={{
+                  scale: [1, 1.1, 1],
+                  boxShadow: [
+                    "0 0 0px rgba(255,255,255,0)",
+                    "0 0 10px rgba(255,255,255,0.7)",
+                    "0 0 0px rgba(255,255,255,0)",
+                  ],
+                }}
+                transition={{ duration: 0.6, ease: "easeInOut" }}
+                viewport={{ once: false }}
               >
                 {purchaseBtnClicked || chart.some((item) => item.id === tool.id)
                   ? "Purchased"
                   : "Buy Now"}
-              </button>
+              </motion.button>
             </div>
           </div>
         </div>

@@ -2,11 +2,18 @@ import axios from "axios";
 import React, { Suspense } from "react";
 import MembershipCards from "./MembershipCards";
 import MembershipDataHeader from "./MembershipDataHeader";
+import { motion } from "framer-motion";
 
 const membershipDataPromise = axios.get("/membership.json");
 const MembershipData = () => {
   return (
-    <section className="lg:w-10/12 md:mx-6 mx-4 lg:mx-auto my-40">
+    <motion.section
+      className="lg:w-10/12 md:mx-6 mx-4 lg:mx-auto md:my-40 my-30"
+      initial={{ x: 300, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+      viewport={{ once: true }}
+    >
       <Suspense
         fallback={
           <div className="flex w-52 flex-col gap-4">
@@ -23,7 +30,7 @@ const MembershipData = () => {
           membershipDataPromise={membershipDataPromise}
         ></MembershipCards>
       </Suspense>
-    </section>
+    </motion.section>
   );
 };
 

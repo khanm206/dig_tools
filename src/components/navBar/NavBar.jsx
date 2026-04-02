@@ -82,7 +82,7 @@ const NavBar = ({ chart }) => {
               <div className="navbar-end gap-2 md:gap-4">
                 <div className="relative">
                   <p
-                    className={`badge badge-error text-white  ${chart.length > 0 ? "absolute" : "hidden"}  rounded-full p-1 left-[65%] -top-[20%] h-4`}
+                    className={`badge badge-error text-white  ${chart.length > 0 ? "absolute" : "hidden"}  rounded-full p-1 left-[55%] -top-[20%] animate-bounce h-4`}
                   >
                     {chart.length}
                   </p>

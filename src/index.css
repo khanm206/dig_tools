@@ -2,6 +2,7 @@
 
 @import "tailwindcss";
 @plugin "daisyui";
+@import "tailwindcss-animated";
 
 * {
   font-family: "Manrope", sans-serif;
