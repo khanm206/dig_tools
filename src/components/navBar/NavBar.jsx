@@ -5,7 +5,7 @@ import { ShoppingCart } from "lucide-react";
 const NavBar = ({ chart }) => {
   return (
     <>
-      <section className="h-15 flex justify-center">
+      <section className="md:h-15 h-10 flex justify-center">
         <div className=" fixed w-full mx-auto z-10 top-0">
           <div className="max-w-450 mx-auto bg-base-100 shadow-sm">
             <div className="navbar lg:w-11/12 mx-auto">

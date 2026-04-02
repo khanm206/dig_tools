@@ -9,8 +9,8 @@ const MembershipData = () => {
   return (
     <motion.section
       className="lg:w-10/12 md:mx-6 mx-4 lg:mx-auto md:my-40 my-30 overflow-x-hidden"
-      initial={{ x: "100%", opacity: 0 }}
-      whileInView={{ x: 0, opacity: 1 }}
+      initial={{ y: 300, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
       transition={{ duration: 1, ease: "easeOut" }}
       viewport={{ once: true }}
     >

@@ -9,7 +9,7 @@ const Status = () => {
   const [tools, setTools] = useState(0);
   const [rating, setRating] = useState(0);
 
-  const animateNumber = (target, setter, duration = 1500) => {
+  const animateNumber = (target, setter, duration = 2000) => {
     let start = 0;
     const increment = target / (duration / 20);
     const counter = setInterval(() => {
@@ -23,20 +23,18 @@ const Status = () => {
     }, 20);
   };
 
-  useEffect(() => {
-    controls.start({ opacity: 1, x: 0 });
-
-    animateNumber(50000, setUsers);
-    animateNumber(200, setTools);
-    animateNumber(49, setRating);
-  }, []);
-
   return (
     <motion.div
-      className="bg-linear-to-r from-primary via-[#4F39F6] to-[#9241c8] overflow-x-hidden"
-      initial={{ x: "100%", opacity: 0 }}
-      animate={controls}
+      className="bg-linear-to-r from-primary via-[#4F39F6] to-[#9241c8] overflow-x-hidden mt-18"
+      initial={{ y: 300, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
       transition={{ duration: 1, ease: "easeOut" }}
+      viewport={{ once: true }}
+      onViewportEnter={() => {
+        animateNumber(50000, setUsers);
+        animateNumber(200, setTools);
+        animateNumber(49, setRating);
+      }}
     >
       <div className="lg:mx-auto text-center text-white flex justify-around items-center mx-4 md:mx-6 lg:w-10/12 py-10 md:py-20 mt-10">
         <div className="space-y-1 lg:space-y-3">

@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const Banner = () => {
   return (
     <motion.div
-      className="lg:w-10/12 mx-4 md:mx-6 lg:mx-auto flex justify-between items-center flex-col lg:flex-row lg:my-20 my-10 max-h-screen overflow-hidden"
+      className="lg:w-10/12 mx-4 md:mx-6 lg:mx-auto flex justify-between items-center flex-col lg:flex-row lg:my-20 mb-10 mt-4 max-h-screen overflow-hidden"
       initial={{ x: "-100%", opacity: 0 }}
       whileInView={{ x: 0, opacity: 1 }}
       transition={{ duration: 1, ease: "easeOut" }}
