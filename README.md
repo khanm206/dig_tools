@@ -1,161 +1,56 @@
-# 🎯 A-6 Digital Tools Buying Website
+# 🚀 DigTools
 
-## 📅 Deadlines
-- 60 Marks: 1st April, 2026 (11:59 PM ⏱️)  
-- 50 Marks: No Deadline for 50 marks.  
-- 30 Marks: Any time after 1st April.  
+**Supercharge Your Digital Workflow**  
+Discover premium digital tools to boost productivity and creativity.
 
----
-
----
-
-## 🚫 Key Rules
-- Don't ask about mark distribution in the group. We don't provide it.  
-- Don't post assignment feedback after you receive it. If you face any problem or have any complaints then join a support session and discuss it.  
-- Don’t use any lorem ipsum text, rather use relevant and meaningful text content.  
-- You can change the color if you want but remember that it should not be a gobindo color.  
-- Use at least 8 git commits with meaningful messages.  
+[![Live Demo](https://img.shields.io/badge/Live-Demo-6C63FF?style=for-the-badge&logo=netlify&logoColor=white)](https://digtool-mk.netlify.app)
+![React](https://img.shields.io/badge/React-18-blue?style=for-the-badge&logo=react)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![DaisyUI](https://img.shields.io/badge/DaisyUI-UI-5A0EF8?style=for-the-badge)
+![Framer Motion](https://img.shields.io/badge/FramerMotion-Animation-black?style=for-the-badge&logo=framer)
 
 ---
 
-## 🧩 Features & Requirements
+## 📖 Description
 
-### 🧭 Navbar
-- Navbar designed according to Figma  
-- Cart icon displayed (initially empty)  
+DigTools is a modern web platform that provides a curated collection of premium digital tools in one place. Users can browse tools, add them to their cart, and manage selections through a smooth, interactive interface enhanced with animations and responsive design.
 
 ---
 
-### 🎯 Banner
-- Banner section includes:
-  - Heading  
-  - Description text  
-  - Image  
-  - Buttons  
+## 🛠️ Technologies Used
+
+- ⚛️ React
+- 🎨 Tailwind CSS
+- 🌼 DaisyUI
+- 🎬 Framer Motion
+- 🔔 React Toastify
+- 📦 Axios
 
 ---
 
-### 📊 Stats Section
-- Stats section designed based on Figma  
+## ✨ Features
+
+- 🛒 Dynamic cart system with add/remove functionality
+- 🎬 Smooth animations and transitions using Framer Motion
+- 📱 Fully responsive design for mobile, tablet, and desktop
+- 🔔 Real-time toast notifications for user interactions
+- 🚫 Smart duplicate prevention in cart
+- 🧩 Dynamic product rendering from JSON data
 
 ---
 
-### 🔄 Main Section & Toggling
-- Design  2 buttons at the center of the section.
-- By clicking Cart,  the cart section will be shown. By default it will show an empty message.
-- By Clicking  Product,  the Products section will be shown. 
-- By Default product section will be visible. 
+## 🌐 Live Demo
 
+👉 https://digtool-mk.netlify.app
 
 ---
 
-### 📦 JSON Data
-Create 6–10 product data with:
-- id  
-- name  
-- description  
-- price  
-- period (one-time / monthly / yearly)  
-- tag ( example- popular, new, best seller) 
-- tagType ( example- popular, new, best seller) 
-- features ( array. Example:  ["100+ templates", "ATS optimization", "Export to PDF"] )   
-- icon  
+## 👨‍💻 Author
 
-🚩 You can take help of AI Systems for generating a JSON Data
+Moin
 
 ---
 
-### 🃏 Product Cards
-- Display all products in a 3-column layout  
-- Each card includes:
-  - Name  
-  - Description  
-  - Price  
-  - Period  
-  - TagType  
-  - Features  
-  - Icon  
-  - Buy Now button  
+## ⭐ Support
 
----
-
-### 🛒 Cart Functionality
-- Show selected products in cart  
-- Display total product count in navbar  
-- Cart layout: 1 column  
-- Each cart item includes:
-  - Name  
-  - Icon  
-  - Price  
-  - Remove button  
-- "Proceed to Checkout" button:
-  - Clears all cart items  
-
----
-
-### 🪜 Steps Section
-- Designed according to Figma  
-
----
-
-### 💰 Pricing Section
-- Designed according to Figma  
-
----
-
-### 🦶 Footer
-- Footer designed based on Figma  
-
----
-
-### 📱 Responsive Design
-- Fully responsive across devices  
-- Follow standard responsive practices  
-
----
-
-# 🚀 Challenges Part 
-
-### 🔔 Use a NPM Package React-Toastify
-- Use react toastify to show all the alerts of add to cart, remove, and proceed to checkout. 
-
-
----
-
-### ❌ Implement Selected product remove functionality 
-- On Click Remove Button product will remove from cart section.
-
-- In this section the total of the selected products ( added on the carts) will show here. 
-- Proceed to checkout button will remove all the products from the cart  
-
-
-
----
-
-### 📂 GitHub Repository
-- Create Beautiful Github Readme with following description
-    - Name of your  Project
-    - A little Description
-    - Technology that you use
-    - 3 Features about your project. 
- 
-
----
-## Optional Features: 
-
-1. When you click on a product it increases the cart count in the Navbar and clears it when you click on the proceed to checkout button. 
-2. When clicking on the Buy now Button it shows an “Added to cart” message on the button. 
-
-
-## ⚙️ Technologies Used
-- React.js  
-- Tailwind CSS, DaisyUI 
-- JavaScript (ES6+)  
-- React-Toastify (NPM Package)  
-- JSON (for product data)  
-
----
-
-## 📤 What to submit:
-- GitHub Repository Link:
-- Live Site Link:
+If you like this project, give it a ⭐ and share your feedback!
