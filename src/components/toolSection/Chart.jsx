@@ -82,11 +82,10 @@ const Chart = ({ chart, setChart }) => {
             >
               <p className="md:text-2xl text-lg">Total</p>
               <p className="lg:text-4xl md:text-3xl text-xl font-semibold">
-                £{total}
+                £{total.toFixed(2)}
               </p>
             </motion.div>
 
-            {/* Checkout Button */}
             <motion.button
               onClick={handleBtn}
               variants={footerVariants}
