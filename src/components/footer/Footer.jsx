@@ -4,7 +4,7 @@ import footerLogo from "../../../src/assets/logo.png";
 const Footer = () => {
   return (
     <section className="bg-[#101727]">
-      <footer className="footer sm:footer-horizontal text-white/80 lg:w-11/12 lg:mx-auto md:mx-6 mx-4 p-10">
+      <footer className="footer sm:footer-horizontal text-white/80 lg:w-11/12 lg:mx-auto p-10">
         <aside>
           <img className="max-w-35" src={footerLogo} />
           <p>
