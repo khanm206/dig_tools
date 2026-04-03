@@ -76,22 +76,11 @@ const Footer = () => {
         </nav>
       </footer>
       <hr className="text-white/40 md:w-11/12 mx-auto" />
-      <footer className="footer sm:footer-horizontal  text-neutral-content items-center md:w-11/12 mx-auto p-4 hidden md:block">
+      <footer className="footer sm:footer-horizontal  text-neutral-content items-center md:w-11/12 mx-auto p-4">
         <aside className="grid-flow-col items-center">
           <p>© {new Date().getFullYear()} Digtools. All right reserved.</p>
         </aside>
         <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-          <a>Privacy Policy</a>
-          <a>Terms of Service</a>
-          <a>Cookies</a>
-        </nav>
-      </footer>
-
-      <footer className="footer sm:footer-horizontal  text-neutral-content items-center md:w-11/12 mx-auto p-4 md:hidden">
-        <aside className="grid-flow-col items-center mx-auto">
-          <p>© {new Date().getFullYear()} Digtools. All right reserved.</p>
-        </aside>
-        <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end mx-auto">
           <a>Privacy Policy</a>
           <a>Terms of Service</a>
           <a>Cookies</a>
