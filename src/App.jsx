@@ -1,4 +1,4 @@
-import { ToastContainer } from "react-toastify";
+import { Flip, ToastContainer } from "react-toastify";
 import "./App.css";
 import NavBar from "./components/navBar/NavBar";
 import Banner from "./components/banner/Banner";
@@ -30,7 +30,19 @@ function App() {
 
       <Footer></Footer>
 
-      <ToastContainer></ToastContainer>
+      <ToastContainer
+        position="bottom-center"
+        autoClose={1500}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+        transition={Flip}
+      />
     </>
   );
 }
